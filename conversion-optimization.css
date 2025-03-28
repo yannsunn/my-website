@@ -1,0 +1,217 @@
+/* コンバージョン率向上のためのCSSオプティマイゼーション */
+
+/* CTAボタンの視覚的強化 */
+.btn-primary, .btn-submit, .btn-service {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    padding: 16px 40px;
+}
+
+/* パルスアニメーション - 注目を集める */
+@keyframes ctaPulse {
+    0% {box-shadow: 0 0 0 0 rgba(255, 126, 29, 0.7);}
+    70% {box-shadow: 0 0 0 15px rgba(255, 126, 29, 0);}
+    100% {box-shadow: 0 0 0 0 rgba(255, 126, 29, 0);}
+}
+
+/* 主要CTAのアニメーション */
+.hero .btn-primary, .cta-banner .btn, .btn-submit, .floating-cta .btn-float {
+    animation: ctaPulse 2s infinite;
+}
+
+/* ハイライトカードは animation.css と color-optimization.css で定義されているので削除 */
+/* .card.highlight {
+    transform: scale(1.05);
+    z-index: 2;
+} */
+
+/* 信頼性要素の視覚的強化 */
+.guarantee-badge {
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.guarantee-badge i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.guarantee-badge p {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+/* 実績数値の強調表示 */
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* 視覚的注目ポイントの作成 */
+.highlight-section {
+    position: relative;
+}
+
+.highlight-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, rgba(255,126,29,0.05) 0%, rgba(255,255,255,0) 100%);
+    z-index: -1;
+    border-left: 3px solid var(--accent-color);
+}
+
+/* フォーム最適化 - ユーザーフレンドリーな入力フィールド */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 126, 29, 0.2);
+}
+
+/* 必須フィールドのラベル強調 */
+.form-group label .required {
+    color: var(--accent-color);
+    font-size: 1.2em;
+    line-height: 1;
+    margin-left: 3px;
+}
+
+/* モバイル最適化 - タップターゲットの拡大 */
+@media (max-width: 768px) {
+    .btn, .btn-service, .form-group input, .form-group select {
+        padding: 15px 25px;
+        min-height: 50px;
+    }
+    
+    nav ul li a {
+        padding: 10px 15px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+}
+
+/* スクロールプロンプト - ユーザーにスクロールを促す */
+.scroll-prompt {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.scroll-prompt:hover {
+    opacity: 1;
+}
+
+.scroll-prompt .mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.scroll-prompt .mouse::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    80% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+}
+
+/* 社会的証明の強調 */
+.social-proof {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 30px auto 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.social-proof-icon {
+    background-color: rgba(30, 136, 229, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.social-proof-icon i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.social-proof-text {
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+
+.social-proof-text strong {
+    color: var(--accent-color);
+}
+
+/* 緊急感を与えるバッジ */
+.urgency-badge {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+.urgency-badge i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+} 

@@ -1,0 +1,106 @@
+/* CTRとコンバージョン向上のための色合い最適化 */
+
+:root {
+    /* 既存の色を微調整した最適化バージョン */
+    --primary-color: #1E88E5;       /* より鮮やかな青に調整 */
+    --secondary-color: #1F2937;     /* 少し濃いめに調整して読みやすく */
+    --accent-color: #FF7E1D;        /* オレンジ系に変更 - CTAの注目度UP */
+    --light-color: #F8FAFC;         /* より明るく清潔感のある印象に */
+    --dark-color: #111827;          /* より濃いめに調整 */
+    --success-color: #22C55E;       /* より明るい緑色に調整 */
+    --text-color: #374151;          /* 読みやすいグレーに調整 */
+    
+    /* 新しい色の追加 */
+    --cta-hover: #F97316;           /* CTA用ホバー色 */
+    --highlight-color: #FEF3C7;     /* 重要テキストハイライト用 */
+    --trust-badge-color: #E0F2FE;   /* 信頼性表示用の柔らかい青 */
+}
+
+/* ヒーローセクションの色調整 */
+.hero {
+    background: linear-gradient(135deg, rgba(30, 136, 229, 0.9), rgba(25, 91, 152, 0.9)), url('images/hero-bg.jpg');
+}
+
+/* CTAボタンの色調整 */
+.btn-primary {
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 6px rgba(255, 126, 29, 0.25), 0 2px 4px rgba(255, 126, 29, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: var(--cta-hover);
+    box-shadow: 0 7px 14px rgba(255, 126, 29, 0.25), 0 5px 5px rgba(255, 126, 29, 0.1);
+}
+
+/* CTAバナーの色調整 */
+.cta-banner {
+    background: linear-gradient(135deg, var(--accent-color), var(--cta-hover));
+}
+
+/* ハイライトテキストの色調整 */
+.highlight-text {
+    color: var(--highlight-color);
+}
+
+.highlight-text::after {
+    background-color: rgba(254, 243, 199, 0.3);
+}
+
+/* 強調カードの色調整 - transformプロパティを削除し、animation.cssで管理 */
+.card.highlight {
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 10px 25px rgba(255, 126, 29, 0.15);
+}
+
+/* バッジとアイコンの色調整 */
+.badge i {
+    color: var(--success-color);
+}
+
+/* 料金の色調整 */
+.price {
+    color: var(--accent-color);
+}
+
+/* フォーム送信ボタンの色調整 */
+.btn-submit {
+    background-color: var(--accent-color);
+}
+
+.btn-submit:hover {
+    background-color: var(--cta-hover);
+}
+
+/* 保証バッジの色調整 */
+.guarantee-badge {
+    background-color: var(--trust-badge-color);
+}
+
+.guarantee-badge i {
+    color: var(--primary-color);
+}
+
+.guarantee-badge:hover {
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* フローティングCTAボタンの色調整 */
+.btn-float {
+    background-color: var(--accent-color);
+    box-shadow: 0 5px 20px rgba(255, 126, 29, 0.4);
+}
+
+.btn-float:hover {
+    background-color: var(--cta-hover);
+}
+
+/* 数値ハイライトの色調整 */
+.stat-value {
+    color: var(--accent-color);
+}
+
+/* 重要なセクションの背景をより明るく */
+.about, .service {
+    background-color: var(--light-color);
+} 

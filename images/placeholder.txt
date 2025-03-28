@@ -1,0 +1,16 @@
+LP用の必要画像ファイル：
+
+1. hero-bg.jpg - ヒーローセクションの背景画像（青系のビジネスやテクノロジーに関する画像）
+2. tiktok-achievement.jpg - TikTokの10万フォロワー達成のスクリーンショット
+3. instagram-achievement.jpg - Instagramの5万フォロワー以上達成のスクリーンショット
+4. youtube-achievement.jpg - YouTubeの5万登録者達成のスクリーンショット
+5. client1.jpg - お客様の声のアバター画像1（女性のプロフェッショナルな印象）
+6. client2.jpg - お客様の声のアバター画像2（男性のプロフェッショナルな印象）
+7. partner1.png - パートナー企業ロゴ1
+8. partner2.png - パートナー企業ロゴ2
+9. partner3.png - パートナー企業ロゴ3
+10. partner4.png - パートナー企業ロゴ4
+11. partner5.png - パートナー企業ロゴ5
+
+※これらの画像はフリー素材サイト（Unsplash、Pexels、Pixabayなど）から商用利用可能な画像をダウンロードするか、
+自社で撮影・作成した画像を使用してください。ロゴ等については架空のものやサンプル用のものを使用してください。 

@@ -1,0 +1,165 @@
+/* カードレイアウトとデザイン修正用CSS */
+
+/* おすすめラベルの修正 */
+.card.highlight::before {
+    content: "おすすめ";
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 1;
+    /* コンテンツを隠さないための調整 */
+    opacity: 0.9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* カード内のテキスト配置の修正 */
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    text-align: center;
+    /* 長いタイトルでも2行に収まるよう高さを確保 */
+    min-height: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 20px;
+    /* 内容が一定の高さを確保 */
+    min-height: 4.8em;
+    line-height: 1.6;
+}
+
+/* フィーチャーリストの修正 */
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+    /* 一定の高さを確保 */
+    min-height: 120px;
+}
+
+.features li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.features li i {
+    color: var(--success-color);
+    margin-top: 3px; /* アイコンを少し下げて、テキストと揃える */
+}
+
+/* 料金表示の修正 */
+.price {
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    text-align: center;
+    /* 料金の表示位置を固定 */
+    min-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ボタンの配置修正 */
+.btn-service {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* 実績カードの調整 */
+.achievement-item {
+    flex: 0 1 300px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.achievement-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    min-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* レスポンシブ対応の強化 */
+@media (max-width: 768px) {
+    .card h3 {
+        min-height: auto;
+        margin-bottom: 15px;
+    }
+    
+    .card p {
+        min-height: auto;
+    }
+    
+    .features {
+        min-height: auto;
+    }
+    
+    .card.highlight::before {
+        top: 10px;
+        right: -35px;
+        padding: 3px 35px;
+        font-size: 0.7rem;
+    }
+} 

@@ -1,0 +1,25 @@
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# エディタの設定ファイル
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ログファイル
+*.log
+
+# ノードモジュール（もし使用する場合）
+node_modules/
+
+# ビルド結果
+dist/
+build/
+
+# ローカル環境ファイル
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local 
