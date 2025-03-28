@@ -1,6 +1,10 @@
 /* カードレイアウトとデザイン修正用CSS */
 
-/* おすすめラベルの修正 */
+/* おすすめリボンの調整 */
+.card.highlight {
+    overflow: visible;
+}
+
 .card.highlight::before {
     content: "おすすめ";
     position: absolute;
@@ -8,14 +12,25 @@
     right: -30px;
     background-color: var(--accent-color);
     color: white;
-    padding: 5px 40px;
+    padding: 3px 30px;
     transform: rotate(45deg);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: bold;
+    z-index: 3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.card.highlight::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background-color: var(--accent-color);
+    transform: translate(35px, -35px) rotate(45deg);
     z-index: 1;
-    /* コンテンツを隠さないための調整 */
-    opacity: 0.9;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* カード内のテキスト配置の修正 */
