@@ -4,18 +4,16 @@
 .card.highlight::before {
     content: "おすすめ";
     position: absolute;
-    top: 10px;
-    right: -35px;
+    top: 0;
+    right: 0;
     background-color: var(--accent-color);
     color: white;
-    padding: 5px 40px;
-    transform: rotate(45deg);
+    padding: 5px 10px;
     font-size: 0.8rem;
-    font-weight: bold;
     z-index: 1;
-    /* コンテンツを隠さないための調整 */
     opacity: 0.9;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform: none;
+    border-radius: 0 0 0 8px;
 }
 
 /* カード内のテキスト配置の修正 */
@@ -65,28 +63,12 @@
 .price {
     margin: 20px 0;
     font-weight: bold;
-    color: var(--accent-color);
-    font-size: 1.3rem;
-    text-align: center;
-    /* 料金の表示位置を固定 */
-    min-height: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 1.5rem;
 }
 
 /* ボタンの配置修正 */
 .btn-service {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: var(--transition);
-    text-align: center;
-    margin-top: auto;
     width: 100%;
 }
 
@@ -144,6 +126,18 @@
 
 /* レスポンシブ対応の強化 */
 @media (max-width: 768px) {
+    .card {
+        margin-bottom: 30px;
+    }
+    
+    .card.highlight {
+        transform: none;
+    }
+    
+    .card.highlight:hover {
+        transform: translateY(-5px);
+    }
+    
     .card h3 {
         min-height: auto;
         margin-bottom: 15px;
