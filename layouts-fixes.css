@@ -2,6 +2,7 @@
 
 /* おすすめリボンの調整 */
 .card.highlight {
+    position: relative;
     overflow: visible;
 }
 
@@ -9,10 +10,10 @@
     content: "おすすめ";
     position: absolute;
     top: 15px;
-    right: -30px;
+    right: -25px;
     background-color: var(--accent-color);
     color: white;
-    padding: 3px 30px;
+    padding: 3px 26px;
     transform: rotate(45deg);
     font-size: 0.75rem;
     font-weight: bold;
@@ -26,10 +27,11 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 70px;
-    height: 70px;
-    background-color: var(--accent-color);
-    transform: translate(35px, -35px) rotate(45deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 80px 80px 0;
+    border-color: transparent var(--accent-color) transparent transparent;
     z-index: 1;
 }
 
