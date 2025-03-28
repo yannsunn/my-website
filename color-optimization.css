@@ -64,11 +64,13 @@
 
 /* フォーム送信ボタンの色調整 */
 .btn-submit {
-    background-color: var(--accent-color);
+    background-color: #F26419; /* オレンジだが少し落ち着いた色合い */
+    box-shadow: 0 4px 10px rgba(242, 100, 25, 0.25);
 }
 
 .btn-submit:hover {
-    background-color: var(--cta-hover);
+    background-color: #E8590C; /* よりダークなオレンジに変更 */
+    box-shadow: 0 6px 12px rgba(242, 100, 25, 0.35);
 }
 
 /* 保証バッジの色調整 */
