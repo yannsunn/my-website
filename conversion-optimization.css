@@ -17,8 +17,8 @@
     100% {box-shadow: 0 0 0 0 rgba(255, 126, 29, 0);}
 }
 
-/* 主要CTAのアニメーション */
-.hero .btn-primary, .cta-banner .btn, .btn-submit, .floating-cta .btn-float {
+/* 主要CTAのアニメーション - 修正版 */
+.hero .btn-primary, .cta-banner .btn, .floating-cta .btn-float {
     animation: ctaPulse 2s infinite;
 }
 

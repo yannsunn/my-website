@@ -823,13 +823,23 @@ section h2::after {
 }
 
 .btn-submit {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
+    color: white;
     width: 100%;
     font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(30, 136, 229, 0.25);
 }
 
 .btn-submit:hover {
-    background-color: var(--cta-hover);
+    background-color: #0d6efd;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(30, 136, 229, 0.35);
 }
 
 .form-note {
